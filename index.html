@@ -52,10 +52,9 @@
     },
     'onmessage': function(m) {
       var msg = m.data;
- // Replace all instances of /bold in the message
+  // Replace all instances of /bold in the message
       msg = msg.replace('/bold', '<b>bold</b>');
-      // Blindly append the message to the end of the element.
-      //msg = msg.replace('/shruggie', '<p>¯\_(ツ)_/¯</p>');
+      msg = msg.replace('/shruggie', '¯\_(ツ)_/¯');
       messages.append('<p class="message">' + m.data + '</p>');
     },
     'onerror': function() {}, // No-op.
